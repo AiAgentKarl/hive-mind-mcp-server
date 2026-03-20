@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hive-mind-mcp-server"
+version = "0.1.0"
+description = "Swarm intelligence for AI agents — collective decision-making, consensus voting, and multi-agent coordination"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [{name = "AiAgentKarl"}]
+keywords = ["mcp", "hive-mind", "swarm", "consensus", "multi-agent", "decision-making", "voting"]
+dependencies = ["mcp>=1.0.0", "pydantic>=2.0.0"]
+
+[project.urls]
+Homepage = "https://github.com/AiAgentKarl/hive-mind-mcp-server"
+Repository = "https://github.com/AiAgentKarl/hive-mind-mcp-server"
+
+[project.scripts]
+hive-mind = "src.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
